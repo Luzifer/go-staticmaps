@@ -12,8 +12,8 @@ import (
 	"sort"
 	"strings"
 
+	sm "github.com/Luzifer/go-staticmaps"
 	"github.com/flopp/go-coordsparser"
-	sm "github.com/flopp/go-staticmaps"
 	"github.com/fogleman/gg"
 	"github.com/golang/geo/s2"
 	"github.com/jessevdk/go-flags"

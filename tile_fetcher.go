@@ -42,7 +42,7 @@ func NewTileFetcher(tileProvider *TileProvider, cache TileCache, online bool) *T
 	t := new(TileFetcher)
 	t.tileProvider = tileProvider
 	t.cache = cache
-	t.userAgent = "Mozilla/5.0+(compatible; go-staticmaps/0.1; https://github.com/flopp/go-staticmaps)"
+	t.userAgent = "Mozilla/5.0+(compatible; go-staticmaps/0.1; https://github.com/Luzifer/go-staticmaps)"
 	t.online = online
 	return t
 }
@@ -180,7 +180,7 @@ func (t *TileFetcher) storeCache(fileName string, data []byte) error {
 	file, err := os.OpenFile(
 		fileName,
 		os.O_RDWR|os.O_CREATE|os.O_TRUNC,
-		t.cache.Perm()&0666,
+		t.cache.Perm()&0o666,
 	)
 	if err != nil {
 		return err

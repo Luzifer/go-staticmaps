@@ -3,7 +3,7 @@
 package main
 
 import (
-	sm "github.com/flopp/go-staticmaps"
+	sm "github.com/Luzifer/go-staticmaps"
 	"github.com/fogleman/gg"
 	"github.com/golang/geo/s2"
 )

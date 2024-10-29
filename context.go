@@ -63,7 +63,7 @@ func NewContext() *Context {
 	t.userAgent = ""
 	t.online = true
 	t.tileProvider = NewTileProviderOpenStreetMaps()
-	t.cache = NewTileCacheFromUserCache(0777)
+	t.cache = NewTileCacheFromUserCache(0o777)
 	return t
 }
 
@@ -628,7 +628,6 @@ func (m *Context) RenderWithBounds() (image.Image, s2.Rect, error) {
 	img, trans, err := m.RenderWithTransformer()
 	if err != nil {
 		return nil, s2.Rect{}, err
-
 	}
 	return img, trans.Rect(), nil
 }

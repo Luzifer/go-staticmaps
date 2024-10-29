@@ -66,7 +66,6 @@ func parseSizeString(s string) (float64, error) {
 }
 
 func parseLabelOffset(s string) (float64, error) {
-
 	// todo: add a way to specify offset with up, down, right, left
 
 	if floatValue, err := strconv.ParseFloat(s, 64); err == nil && floatValue > 0 {

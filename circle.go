@@ -4,9 +4,8 @@ import (
 	"image/color"
 	"log"
 	"math"
-	"strings"
-
 	"strconv"
+	"strings"
 
 	"github.com/flopp/go-coordsparser"
 	"github.com/fogleman/gg"
